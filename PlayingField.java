@@ -114,7 +114,6 @@ public class PlayingField {
                 orealAxisY.add(y4 + 1);
             }
 
-            // теперь добавляем корабль
             field[y1][x1] = ("🛥");
             field[y2][x2] = ("🛥");
             field[y3][x3] = ("🛥");
@@ -209,7 +208,6 @@ public class PlayingField {
                 }
             }
 
-            // теперь добавляем корабль
             field[y1][x1] = "🛥";
             field[y2][x2] = "🛥";
             field[y3][x3] = "🛥";
@@ -345,7 +343,6 @@ public class PlayingField {
                 orealAxisY.add(y2 + 1);
             }
 
-            // теперь добавляем корабль
             field[y1][x1] = "🛥";
             field[y2][x2] = "🛥";
 
@@ -411,7 +408,6 @@ public class PlayingField {
                 orealAxisY.add(y1 + 1);
             }
 
-            // теперь добавляем корабль
             field[y1][x1] = "🛥";
 
             for (String[] x: field){
@@ -432,8 +428,6 @@ public class PlayingField {
         System.out.println("Введи координаты четырехпалубного корабля (формат: x,y; x,y; x,y; x,y)");
         addEmptyPlace();
         addShip4();
-        System.out.println(axisX);
-        System.out.println(axisY);  /// убрать потом!
         /*System.out.println("Теперь перейдем к трехпалубному кораблю!");
         addShip3();
         System.out.println("Капитан, нужен второй!");
