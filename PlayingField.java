@@ -4,10 +4,10 @@ import java.util.*;
 
 public class PlayingField {
     private final String[][] field;
-    public final Set<Integer> axisX = new HashSet<>();
-    public final Set<Integer> axisY = new HashSet<>();
-    public final Set<Integer> orealAxisX = new HashSet<>();
-    public final Set<Integer> orealAxisY = new HashSet<>();
+    public Set<Integer> axisX = new HashSet<>();
+    public Set<Integer> axisY = new HashSet<>();
+    public Set<Integer> orealAxisX = new HashSet<>();
+    public Set<Integer> orealAxisY = new HashSet<>();
 
     public PlayingField() {
         field = new String[10][10];
@@ -19,7 +19,7 @@ public class PlayingField {
         }
     }
 
-    private void addShip4(){
+    private void addFourDeckShip(){
 
         try {
             Scanner scanner = new Scanner(System.in);
@@ -125,15 +125,15 @@ public class PlayingField {
 
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Капитан, не верно указаны координаты!");
-            addShip4();
+            addFourDeckShip();
         }catch (NoSuchElementException e){
             System.out.println("Капитан вы забываете важную вещь - ваш корабль четырёхпалубный! " +
                     "введите 4 координаты!");
-            addShip4();
+            addFourDeckShip();
         }
     }
 
-    private void addShip3(){
+    private void addThreeDeckShip(){
 
         try {
             Scanner scanner = new Scanner(System.in);
@@ -250,15 +250,15 @@ public class PlayingField {
 
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Капитан, не верно указаны координаты!");
-            addShip3();
+            addThreeDeckShip();
         }catch (NoSuchElementException e){
             System.out.println("Капитан вы забываете важную вещь - ваш корабль трёхпалубный! " +
                     "введите 3 координаты!");
-            addShip3();
+            addThreeDeckShip();
         }
     }
 
-    private void addShip2(){
+    private void addTwoDeckShip(){
 
         try {
             Scanner scanner = new Scanner(System.in);
@@ -352,15 +352,15 @@ public class PlayingField {
 
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Капитан, не верно указаны координаты!");
-            addShip2();
+            addTwoDeckShip();
         }catch (NoSuchElementException e){
             System.out.println("Капитан вы забываете важную вещь - ваш корабль двухпалубный! " +
                     "введите 2 координаты!");
-            addShip2();
+            addTwoDeckShip();
         }
     }
 
-    private void addShip1(){
+    private void addOneDeckShip(){
 
         try {
             Scanner scanner = new Scanner(System.in);
@@ -416,30 +416,30 @@ public class PlayingField {
 
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Капитан, не верно указаны координаты!");
-            addShip1();
+            addOneDeckShip();
         }catch (NoSuchElementException e){
             System.out.println("Капитан вы забываете важную вещь - этот корабль очень маленький! " +
                     "введите введите всего одну координату!");
-            addShip1();
+            addOneDeckShip();
         }
     }
 
     public void addShipsToPLayer(){
         System.out.println("Введи координаты четырехпалубного корабля (формат: x,y; x,y; x,y; x,y)");
         addEmptyPlace();
-        addShip4();
-        /*System.out.println("Теперь перейдем к трехпалубному кораблю!");
-        addShip3();
+        addFourDeckShip();
+        System.out.println("Теперь перейдем к трехпалубному кораблю!");
+        addThreeDeckShip();
         System.out.println("Капитан, нужен второй!");
-        addShip3();
-        System.out.println("Переходим к двухпалубным! Капитан, нужно таких 3!");
-        addShip2();
-        addShip2();
-        addShip2();
-        System.out.println("Остались самые маленькие кэп! Их нужно 4!");
-        addShip1();
-        addShip1();
-        addShip1();
-        addShip1();*/
+        addThreeDeckShip();
+        System.out.println("Переходим к двухпалубным! Капитан, нужно таких 3 штуки!");
+        addTwoDeckShip();
+        addTwoDeckShip();
+        addTwoDeckShip();
+        System.out.println("Остались самые маленькие кэп! Таких нужно целых 4 штуки!");
+        addOneDeckShip();
+        addOneDeckShip();
+        addOneDeckShip();
+        addOneDeckShip();
     }
 }
