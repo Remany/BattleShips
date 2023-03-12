@@ -3,7 +3,7 @@ package FinalProject;
 import java.util.*;
 
 public class GameImplementation {
-    final String[][] attackField;
+    String[][] attackField;
     Set<Integer> savedShotsAxisX = new HashSet<>();
     Set<Integer> savedShotsAxisY = new HashSet<>();
     Set<Integer> destroyedShipsAxisX = new HashSet<>();

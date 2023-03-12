@@ -10,6 +10,7 @@ public class Player extends PlayingField {
     GameImplementation gameImplementation = new GameImplementation();
     public Player(String name) {
         this.name = name;
+        System.out.println("Игрок " + name + " начинает расставлять свои корабли!");
         addShipsToPLayer();
     }
 

@@ -3,7 +3,7 @@ package FinalProject;
 import java.util.*;
 
 public class PlayingField {
-    private final String[][] field;
+    private String[][] field;
     public Set<Integer> axisX = new HashSet<>();
     public Set<Integer> axisY = new HashSet<>();
     public Set<Integer> orealAxisX = new HashSet<>();
